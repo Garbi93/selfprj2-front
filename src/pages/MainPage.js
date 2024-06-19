@@ -1,7 +1,12 @@
 import React from "react";
+import BasicLayout from "../layouts/BasicLayout";
 
 function MainPage() {
-  return <div className="text-3xl">Main Page</div>;
+  return (
+    <BasicLayout>
+      <div>main page</div>
+    </BasicLayout>
+  );
 }
 
 export default MainPage;
