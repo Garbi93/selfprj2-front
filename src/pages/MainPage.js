@@ -1,10 +1,11 @@
 import React from "react";
 import BasicLayout from "../layouts/BasicLayout";
+import { Box } from "@chakra-ui/react";
 
 function MainPage() {
   return (
     <BasicLayout>
-      <div>main page</div>
+      <Box style={{ fontSize: "xx-large" }}>main page</Box>
     </BasicLayout>
   );
 }
