@@ -1,23 +1,34 @@
 import React from "react";
-import BasicMenu from "../components/menus/BasicMenu";
+import {
+  Card,
+  CardBody,
+  CardFooter,
+  CardHeader,
+  Center,
+} from "@chakra-ui/react";
+import HeaderBar from "./HeaderBar";
+import FooterBar from "./FooterBar";
 
 function BasicLayout({ children }) {
   return (
-    <>
-      <header className="bg-teal-400 p-5">
-        <h1 className="text-2xl md:text-4xl">
-          <BasicMenu />
-        </h1>
-      </header>
-      <div className="bg-white my-5 w-full flex flex-col space-y-4 md:flex-row md:space-x-4 md:space-y-0">
-        <main className="bg-sky-300 md:w-2/3 lg:w-3/4 px-5 py-40">
+    <Center mt="20">
+      <Card
+        w="393px"
+        h="852px"
+        shadow="1px 1px 3px 1px #dadce0"
+        border="1px solid silver"
+      >
+        <CardHeader w="100%" h="95px" bg="green.400" p="0">
+          <HeaderBar />
+        </CardHeader>
+        <CardBody w="100%" h="657px">
           {children}
-        </main>
-        <aside className="bg-green-300 md:w-1/3 lg:w-1/4 px-5 py-40">
-          <h1 className="text-2xl md:text-4xl"> Sidebar </h1>
-        </aside>
-      </div>
-    </>
+        </CardBody>
+        <CardFooter w="100%" h="100px" bg="blue.400" p="0">
+          <FooterBar />
+        </CardFooter>
+      </Card>
+    </Center>
   );
 }
 
