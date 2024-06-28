@@ -21,7 +21,7 @@ function BasicLayout({ children }) {
         <CardHeader w="100%" h="95px" bg="green.400" p="0">
           <HeaderBar />
         </CardHeader>
-        <CardBody w="100%" h="657px">
+        <CardBody w="100%" h="657px" p="0">
           {children}
         </CardBody>
         <CardFooter w="100%" h="100px" bg="blue.400" p="0">

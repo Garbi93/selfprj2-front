@@ -1,8 +1,16 @@
 import React from "react";
 import { Box, Flex } from "@chakra-ui/react";
 import { BellIcon } from "@chakra-ui/icons";
+import { useNavigate } from "react-router-dom";
 
 function HeaderBar(props) {
+  const navigate = useNavigate();
+
+  function handleLogoClick() {
+    navigate("/");
+    console.log("로고 클릭됨");
+  }
+
   return (
     <Flex w="100%" h="100%">
       <Box
@@ -13,6 +21,7 @@ function HeaderBar(props) {
         bg="white"
         textAlign="center"
         lineHeight="60px"
+        onClick={handleLogoClick}
       >
         프로젝트 로고
       </Box>
